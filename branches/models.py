@@ -10,4 +10,4 @@ ACCOUNT_TYPE_CHOICES = (('CHK', 'Checking'), ('SVG', 'Savings'), ('CRE', 'Credit
 class Account(Model):
   branch = ForeignKey(Branch, CASCADE, related_name="account")
   owner_name = CharField(max_length=255)
-  account_type = CharField(max_length=255, choices=ACCOUNT_TYPE_CHOICES)
+  account_type = CharField(max_length=3, choices=ACCOUNT_TYPE_CHOICES)
