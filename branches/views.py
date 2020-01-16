@@ -1,5 +1,5 @@
 from .models import Branch, Account
-from .serializers import 
+from .serializers import BranchSerializer
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.generics import ListAPIView, CreateAPIView
 
@@ -10,4 +10,4 @@ class ListBranchesView(ListAPIView):
 
 class CreateBranchesView(CreateAPIView):
   queryset = Branch.objects.all()
-  s
+  serializer_class = BranchSerializer
